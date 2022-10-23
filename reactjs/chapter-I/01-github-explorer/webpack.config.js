@@ -7,6 +7,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: path.resolve(__dirname, 'src', 'index.jsx'),
   // Isso para garantir que vai rodar no Windows também pois no windows, navegasse nos diretórios
   // com o \\ ao invés do /.
