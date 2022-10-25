@@ -9,6 +9,7 @@ const htmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  devtool: 'eval-source-map',
   entry: path.resolve(__dirname, 'src', 'index.jsx'),
   // Isso para garantir que vai rodar no Windows também pois no windows, navegasse nos diretórios
   // com o \\ ao invés do /.
@@ -19,8 +20,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  devServer : {
-    watchFiles: path.resolve(__dirname, 'public'),
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'public')
+    },
   },
   plugins: [
     new htmlWebPackPlugin({
