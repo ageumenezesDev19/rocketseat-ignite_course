@@ -19,6 +19,9 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  devServer : {
+    watchFiles: path.resolve(__dirname, 'public'),
+  },
   plugins: [
     new htmlWebPackPlugin({
         template: path.resolve(__dirname, 'public', 'index.html'),
