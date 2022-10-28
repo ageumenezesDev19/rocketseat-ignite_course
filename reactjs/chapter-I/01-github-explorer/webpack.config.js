@@ -13,7 +13,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   devtool: isDevelopment ? 'eval-source-map' : 'source-map',
-  entry: path.resolve(__dirname, 'src', 'index.jsx'),
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
   // Isso para garantir que vai rodar no Windows também pois no windows, navegasse nos diretórios
   // com o \\ ao invés do /.
   output: {
@@ -21,7 +21,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   devServer: {
     static: {
@@ -38,7 +38,7 @@ module.exports = {
   module: {
     rules: [
         {
-          test: /\.jsx$/,
+          test: /\.(j|t)sx$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
