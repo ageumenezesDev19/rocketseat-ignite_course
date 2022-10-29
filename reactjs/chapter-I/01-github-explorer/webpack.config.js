@@ -14,7 +14,7 @@ module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   devtool: isDevelopment ? 'eval-source-map' : 'source-map',
   entry: path.resolve(__dirname, 'src', 'index.tsx'),
-  // Isso para garantir que vai rodar no Windows também pois no windows, navegasse nos diretórios
+  // Isso de path é para garantir que vai rodar no Windows também pois no windows, navegasse nos diretórios
   // com o \\ ao invés do /.
   output: {
     path: path.resolve(__dirname, 'dist',),
