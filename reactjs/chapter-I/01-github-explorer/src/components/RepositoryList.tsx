@@ -20,17 +20,23 @@ export function RepositoryList() {
     }, []);
 
     return (
-        <section className="repository-list">
-            <h1>Lista de repositórios</h1>
+        <>
+          <section className="repository-list">
+              <h1>Lista de repositórios da<br></br>Rocketseat</h1>
 
-            <ul>
-                {repositories.map(repository => {
-                    return <RepositoryItem
-                    key={repository.id}
-                    repository={ repository }
-                    />
-                })}
-            </ul>
-        </section>
+              <ul>
+                  {repositories.map(repository => {
+                      return <RepositoryItem
+                      key={repository.id}
+                      repository={ repository }
+                      />
+                  })}
+              </ul>
+          </section>
+          <footer className="obs-footer">
+            <p>Obs: Este mini projeto foi feito com React.js e tem como objetivo utilizar a API do GitHUb para <br></br>
+                poder renderizar os repositórios da Rocketseat.</p>
+          </footer>
+        </>
     );
 }
