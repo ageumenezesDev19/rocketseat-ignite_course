@@ -18,7 +18,7 @@ export function App() {
             content="A cool content"
           />
           <Post
-            author="John"
+            author="Alex"
             content="Another cool content"
           />
         </main>
