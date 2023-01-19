@@ -19,14 +19,18 @@ export function Post(props) {
             <time dataTime='2023-01-19 09:40:00'>Publicado há 1h</time>
           </header>
 
-          <div style={styles.content}>
+          <div className={styles.content}>
           <p>Fala galeraa 👋</p>
 
           <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p>
 
-          <p>👉 <a href="" target="_blank" rel="noopener noreferrer">jane.design/doctorcare</a></p>
+          <p>👉 <a href="https://ageumenezesdev19.github.io" target="_blank" rel="noopener noreferrer">ageumenezesdev19.github.io</a></p>
 
-          <p>#novoprojeto #nlw #rocketseat</p>
+          <p>
+            <a href=""> #novoprojeto</a>
+            <a href=""> #nlw</a>
+            <a href=""> #rocketseat</a>
+          </p>
           </div>
         </article>
     )
