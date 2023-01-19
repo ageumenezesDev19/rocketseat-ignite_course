@@ -13,14 +13,8 @@ export function App() {
       <div className={styles.wrepper}>
         <Sidebar/>
         <main>
-          <Post
-            author="John"
-            content="A cool content"
-          />
-          <Post
-            author="Alex"
-            content="Another cool content"
-          />
+          <Post />
+          <Post />
         </main>
       </div>
     </div>
