@@ -11,7 +11,7 @@ export function Post() {
                 <Avatar src="https://avatars.githubusercontent.com/u/89534178?v=4" />
                 <div className={styles.authorInfo}>
                     <strong>Ageu Menezes</strong>
-                    <span>Software Engineer</span>
+                    <span>Web Developer</span>
                 </div>
             </div>
 
