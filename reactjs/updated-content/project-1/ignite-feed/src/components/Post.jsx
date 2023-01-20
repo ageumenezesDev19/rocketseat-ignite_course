@@ -1,3 +1,4 @@
+import { Avatar } from './Avatar'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
@@ -7,10 +8,7 @@ export function Post() {
         <article className={styles.post}>
           <header>
             <div className={styles.author}>
-                <img
-                  className={styles.avatar}
-                  src="https://avatars.githubusercontent.com/u/89534178?v=4" alt="imagem de perfil"
-                />
+                <Avatar src="https://avatars.githubusercontent.com/u/89534178?v=4" />
                 <div className={styles.authorInfo}>
                     <strong>Ageu Menezes</strong>
                     <span>Software Engineer</span>
@@ -19,7 +17,7 @@ export function Post() {
 
             <time>Publicado há 1h</time>
           </header>
-
+ 
           <div className={styles.content}>
           <p>Fala galeraa 👋</p>
 
@@ -46,9 +44,18 @@ export function Post() {
           </form>
 
           <div className={styles.commentList}>
-            <Comment />
-            <Comment />
-            <Comment />
+            <Comment
+              avatar="Alex Martins"
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=40"
+            />
+            <Comment
+              avatar="Jenny Wilson"
+              src="https://images.unsplash.com/photo-1545987796-200677ee1011?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=40"
+            />
+            <Comment
+              avatar="Bessie Cooper"
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=40"
+            />
           </div>
         </article>
     )
