@@ -1,23 +1,31 @@
+import { format, formatDistanceToNow } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 import { Avatar } from './Avatar'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
-export function Post(props) {
+export function Post({ author, publishedAt }) {
+    const dateFormat = format(publishedAt, "dd 'de' LLLL 'ás' HH:mm'h'", {
+      locale: ptBR,
+    });
 
-  console.log(props);
+    const publishedDate = formatDistanceToNow(publishedAt, {
+      locale: ptBR,
+      addSuffix: true,
+    })
 
     return(
-        <article className={styles.post}>
+        <article className={styles.post}> 
           <header>
             <div className={styles.author}>
-                <Avatar src="https://avatars.githubusercontent.com/u/89534178?v=4" />
+                <Avatar src={author.avatarUrl} />
                 <div className={styles.authorInfo}>
-                    <strong>Ageu Menezes</strong>
-                    <span>Web Developer</span>
+                    <strong>{author.name}</strong>
+                    <span>{author.role}</span>
                 </div>
             </div>
 
-            <time>Publicado há 1h</time>
+            <time title={dateFormat} dateTime={publishedAt.toISOString()}>{publishedDate}</time>
           </header>
  
           <div className={styles.content}>
@@ -47,7 +55,7 @@ export function Post(props) {
 
           <div className={styles.commentList}>
             <Comment
-              avatar="Alex Martins"
+              avatar="Mateus Ferreira"
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=40"
             />
             <Comment
