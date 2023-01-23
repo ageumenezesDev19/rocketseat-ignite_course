@@ -20,8 +20,8 @@ export function Post({ author, publishedAt, content }) {
       setNewCommentText(''); 
     }
 
-    function handleNewCommentChange([target]) {
-      setNewCommentText(target.value); 
+    function handleNewCommentChange() {
+      setNewCommentText(event.target.value); 
     }
 
     const dateFormat = format(publishedAt, "dd 'de' LLLL 'ás' HH:mm'h'", {
@@ -50,9 +50,9 @@ export function Post({ author, publishedAt, content }) {
           <div className={styles.content}>
             {content.map((line) => {
               if (line.type === 'paragraph') {
-                return <p>{line.content}</p>
+                return <p key={line.comment}>{line.content}</p>
               } else if (line.type === 'link') {
-                return <p><a href="#">{line.content}</a></p> 
+                return <p key={line.comment}><a href="#">{line.content}</a></p> 
               }
             })}
           </div>
@@ -73,7 +73,7 @@ export function Post({ author, publishedAt, content }) {
 
           <div className={styles.commentList}>
             {comments.map((comment) => {
-               return <Comment content={comment}/>
+               return <Comment key={comment} content={comment}/>
             })}
           </div>
         </article>
