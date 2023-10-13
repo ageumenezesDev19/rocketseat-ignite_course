@@ -15,9 +15,9 @@ createServer({
           id: 1,
           title: 'Freelance de website',
           type: 'deposit',
-          category: 'dev',
+          category: 'Dev',
           amount: 4000,
-          cratedAt: new Date('2021-11-12 09:00:00'),
+          createdAt: new Date('2021-11-12 09:00:00'),
         },
         {
           id: 2,
@@ -25,7 +25,7 @@ createServer({
           type: 'withdraw',
           category: 'Contas',
           amount: 120,
-          cratedAt: new Date('2021-11-12 14:00:00'),
+          createdAt: new Date('2021-11-13 14:00:00'),
         }
       ]
     })
