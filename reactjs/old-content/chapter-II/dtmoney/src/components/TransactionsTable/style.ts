@@ -9,7 +9,7 @@ export const Container = styled.div`
   }
 
   th {
-    color: var (--text-body);
+    color: var(--text-body);
     font-weight: 400;
     padding: 1rem 2rem;
     text-align: left;
@@ -20,18 +20,18 @@ export const Container = styled.div`
     padding: 1rem 2rem;
     border: 0;
     background: var(--shape);
-    color: var(--text-body) ;
+    color: var(--text-body);
     border-radius: 0.25rem;
 
     &:first-child {
-      color: var (--text-title);
+      color: var(--text-title);
     }
 
-    &.Deposit {
+    &.deposit {
       color: var(--green);
     }
 
-    &.Withdraw {
+    &.withdraw {
       color: var(--red);
     }
   }
